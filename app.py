@@ -22,7 +22,7 @@ def predict():
     bmi_value = dt_reg.predict(X_input)[0]
     bmi_category = dt_clf.predict(X_input)[0]
 
-    return render_template("result.html", bmi_value=round(bmi_value, 2), bmi_category=bmi_category)
+    return render_template("insights.html", bmi_value=round(bmi_value, 2), bmi_category=bmi_category)
 
 @app.route("/insights")
 def insights():
