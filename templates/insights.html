@@ -1,14 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="w-[20vw] h-[40vh] mt-[20vh] mx-auto bg-white/30 backdrop-blur-lg shadow-xl rounded-2xl p-8 animate-fadeIn">
-  <h2 class="text-2xl font-bold text-center text-5xl text-white mb-4">Prediction Result</h2>
-  <div class="bg-white h-[10vh] flex flex-col justify-start mt-[10vh] rounded-xl shadow p-4 pt- text-center text-lg font-semibold">
+<div class="max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto bg-white/30 backdrop-blur-lg shadow-xl rounded-2xl p-6 sm:p-8 mt-12 sm:mt-16 animate-fadeIn">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-6">Prediction Result</h2>
+
+  <div class="bg-white p-4 sm:p-6 rounded-xl shadow text-center text-lg sm:text-xl md:text-2xl font-semibold">
     ✅ Your BMI: <span class="text-indigo-600">{{ bmi_value }}</span><br>
     📊 Category: <span class="text-pink-600">{{ bmi_category }}</span>
-</div>
+  </div>
 
-  <div class="mt-6 mt-[10vh] text-center">
-    <a href="/" class="bg-yellow-400 text-3xl hover:bg-yellow-500 text-black px-6 py-2 rounded-xl font-bold">🔙 Back</a>
+  <div class="mt-6 sm:mt-8 text-center">
+    <a href="/" class="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-2 sm:py-3 rounded-xl font-bold text-lg sm:text-xl transition">
+      🔙 Back
+    </a>
+  </div>
+</div>
+<div class="w-[90%] md:w-[70%] lg:w-[50%] mx-auto mt-20 p-6 bg-white/30 backdrop-blur-lg rounded-2xl shadow-xl animate-fadeIn">
+  <h2 class="text-4xl font-extrabold text-center text-white mb-6">Insights</h2>
+  
+  <p class="text-white text-lg mb-4">
+    Here you can see graphs and analytics based on BMI predictions.
+  </p>
+  
+  <!-- Example images of graphs -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <img src="{{ url_for('static', filename='images/pred_vs_actual_bmi.png') }}" alt="Pred vs Actual BMI" class="rounded-xl shadow">
+    <img src="{{ url_for('static', filename='images/confusion_matrix.png') }}" alt="Confusion Matrix" class="rounded-xl shadow">
+  </div>
+  
+  <div class="mt-6 text-center">
+    <a href="/" class="bg-yellow-400 text-black font-bold py-2 px-6 rounded-xl hover:bg-yellow-500 text-xl transition">
+      🔙 Back
+    </a>
   </div>
 </div>
 {% endblock %}
