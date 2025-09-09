@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="w-[30vw] h-[30vh] mt-[20vh] mx-auto bg-white/30 backdrop-blur-lg shadow-xl rounded-2xl p-8 animate-fadeIn">
+  <h2 class="text-5xl font-bold text-center text-white mb-6">About This Project</h2>
+  <p class="text-white text-2xl leading-relaxed">
+    This project predicts <b>Body Mass Index (BMI)</b> using Decision Tree models. 
+    It uses <span class="font-semibold">Flask</span> as backend, <span class="font-semibold">TailwindCSS</span> for UI, 
+    and <span class="font-semibold">Matplotlib/Seaborn</span> for visualization.
+  </p>
+  <ul class="list-disc mt-[5vh] text-3xl list-inside text-white mt-4">
+    <li>Decision Tree Regressor → Predict BMI Value</li>
+    <li>Decision Tree Classifier → Predict BMI Category</li>
+    <li>Dataset: 500 Person Gender, Height, Weight, BMI</li>
+  </ul>
+</div>
+{% endblock %}

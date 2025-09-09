@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="fixed w-full z-20 top-0 left-0 bg-white/10 backdrop-blur-md shadow-lg border-b border-white/20">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-6 md:py-7">
+      <!-- Logo -->
+      <a href="/" class="text-5xl ml-[-50vh] font-extrabold text-white tracking-wide">⚡ BMI Predictor</a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-60 text-white font-medium">
+        <li>
+          <a href="/" class="text-4xl relative group">
+            Home
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="/about" class="text-4xl relative group">
+            About
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="/insights" class="text-4xl relative group">
+            Insights
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all group-hover:w-full"></span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-white text-3xl focus:outline-none">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="menu" class="hidden md:hidden flex flex-col space-y-4 px-6 pb-6 bg-white/10 backdrop-blur-md border-t border-white/20">
+      <a href="/" class="text-white">Home</a>
+      <a href="/about" class="text-white">About</a>
+      <a href="/insights" class="text-white">Insights</a>
+    </div>
+  </nav>
+
+  <!-- Content Wrapper -->
+  <main class="pt-32 px-6">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Script for mobile toggle -->
+  <script>
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>

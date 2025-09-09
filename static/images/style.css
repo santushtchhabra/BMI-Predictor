@@ -1,0 +1,21 @@
+body {
+  background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+  border: none;
+  background: white;
+  border-radius: 20px;
+}
+
+.btn-primary {
+  background: #4a90e2;
+  border: none;
+  transition: transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  background: #357abd;
+}
