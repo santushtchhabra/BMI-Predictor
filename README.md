@@ -26,3 +26,16 @@ Frontend: TailwindCSS, HTML, Jinja2 Templates
 Machine Learning: Scikit-learn (Decision Trees)
 
 Visualization: Matplotlib, Seaborn
+
+Future Improvements
+
+Make the UI fully responsive for all devices
+
+Add user authentication
+
+Store user data in database for history tracking
+
+Include more ML models for comparison
+
+Author
+Santusht Chhabra
