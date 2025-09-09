@@ -37,5 +37,7 @@ Store user data in database for history tracking
 
 Include more ML models for comparison
 
+My linkdin profile:- https://www.linkedin.com/in/santusht-chhabra-7289542b2/
+
 Author
 Santusht Chhabra
